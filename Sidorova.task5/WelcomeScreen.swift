@@ -26,6 +26,10 @@ class WelcomeScreen : UIViewController {
         navigationController?.pushViewController(LoginScreen(), animated: true)
     }
 
+//    displayLoginScreenButton = UIButton(type: .system)
+//    displayLoginScreenButton.backgroundColor = .systemIndigo
+//    displayLoginScreenButton.tintColor = .white
+
     private func setupLoginButton(){
         displayLoginScreenButton = UIButton(type: .system)
         displayLoginScreenButton.setTitle("Login", for: .normal)

@@ -17,6 +17,7 @@
 		07276755257D2C6D004B701C /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07276754257D2C6D004B701C /* LoginScreen.swift */; };
 		07276758257D3058004B701C /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07276757257D3058004B701C /* RegistrationScreen.swift */; };
 		07276761257D3964004B701C /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07276760257D3964004B701C /* AppScreen.swift */; };
+		07276764257D814A004B701C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07276763257D814A004B701C /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		07276754257D2C6D004B701C /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		07276757257D3058004B701C /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
 		07276760257D3964004B701C /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
+		07276763257D814A004B701C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				0727673D257D248F004B701C /* SceneDelegate.swift */,
 				0727673F257D248F004B701C /* ViewController.swift */,
 				07276751257D2896004B701C /* WelcomeScreen.swift */,
+				07276763257D814A004B701C /* CustomButton.swift */,
 				07276757257D3058004B701C /* RegistrationScreen.swift */,
 				07276760257D3964004B701C /* AppScreen.swift */,
 				07276754257D2C6D004B701C /* LoginScreen.swift */,
@@ -153,6 +156,7 @@
 				07276761257D3964004B701C /* AppScreen.swift in Sources */,
 				07276740257D248F004B701C /* ViewController.swift in Sources */,
 				0727673C257D248F004B701C /* AppDelegate.swift in Sources */,
+				07276764257D814A004B701C /* CustomButton.swift in Sources */,
 				07276752257D2896004B701C /* WelcomeScreen.swift in Sources */,
 				0727673E257D248F004B701C /* SceneDelegate.swift in Sources */,
 				07276755257D2C6D004B701C /* LoginScreen.swift in Sources */,
