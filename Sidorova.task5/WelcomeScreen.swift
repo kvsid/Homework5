@@ -8,10 +8,8 @@
 import UIKit
 
 class WelcomeScreen : UIViewController {
-
-    private var displayLoginScreenButton = UIButton()
-    private var displayRegistrationScreenButton = UIButton()
-
+    private var loginScreenButton = CustomButton()
+    private var registrationScreenButton = CustomButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,22 +24,16 @@ class WelcomeScreen : UIViewController {
         navigationController?.pushViewController(LoginScreen(), animated: true)
     }
 
-//    displayLoginScreenButton = UIButton(type: .system)
-//    displayLoginScreenButton.backgroundColor = .systemIndigo
-//    displayLoginScreenButton.tintColor = .white
 
-    private func setupLoginButton(){
-        displayLoginScreenButton = UIButton(type: .system)
-        displayLoginScreenButton.setTitle("Login", for: .normal)
-        displayLoginScreenButton.backgroundColor = .systemIndigo
-        displayLoginScreenButton.tintColor = .white
-        displayLoginScreenButton
-            .frame = CGRect(x: 50, y: view.frame.height/3, width: view.frame.width - 100, height: 40)
-
-        displayLoginScreenButton
+    private func setupLoginButton() {
+        loginScreenButton = CustomButton(
+            frame: CGRect(x: 50, y: view.frame.height/3, width: view.frame.width - 100, height: 40)
+        )
+        loginScreenButton.setTitle("Login", for: .normal)
+        loginScreenButton
             .addTarget(self, action: #selector(performDisplayLogin(parametrSender:)), for: .touchUpInside)
 
-        view.addSubview(displayLoginScreenButton)
+        view.addSubview(loginScreenButton)
     }
 
     @objc func performDisplayRegistration (parametrSender: Any) {
@@ -49,16 +41,13 @@ class WelcomeScreen : UIViewController {
     }
 
     private func setupRegistrationButton(){
-        displayRegistrationScreenButton = UIButton(type: .system)
-        displayRegistrationScreenButton.setTitle("Registration", for: .normal)
-        displayRegistrationScreenButton.backgroundColor = .systemIndigo
-        displayRegistrationScreenButton.tintColor = .white
-        displayRegistrationScreenButton
+        registrationScreenButton.setTitle("Registration", for: .normal)
+        registrationScreenButton
             .frame = CGRect(x: 50, y: view.frame.height/2, width: view.frame.width - 100, height: 40)
 
-        displayRegistrationScreenButton
+        registrationScreenButton
             .addTarget(self, action: #selector(performDisplayRegistration(parametrSender:)), for: .touchUpInside)
 
-        view.addSubview(displayRegistrationScreenButton)
+        view.addSubview(registrationScreenButton)
     }
 }

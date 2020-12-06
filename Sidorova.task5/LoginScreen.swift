@@ -8,9 +8,9 @@
 import UIKit
 
 class LoginScreen : UIViewController {
-    let loginTextField = UITextField()
-    let passwordTextField = UITextField()
-    var signInButton = UIButton()
+    let loginTextField = CustomField()
+    let passwordTextField = CustomField()
+    let signInButton = CustomButton()
     var signSwitch = UISwitch()
     let signLabel = UILabel()
 
@@ -45,25 +45,15 @@ class LoginScreen : UIViewController {
     }
 
     func setupLoginTextField() {
-        loginTextField.backgroundColor = .white
         loginTextField.placeholder = "Enter your login"
-        loginTextField.layer.borderColor = UIColor.systemIndigo.cgColor
-        loginTextField.layer.borderWidth = 4
-        loginTextField.textAlignment = .center
-        loginTextField.contentVerticalAlignment = .center
         loginTextField.frame = CGRect(x: 50, y: view.frame.height/3, width: view.frame.width - 100, height: 31)
 
         view.addSubview(loginTextField)
     }
 
     func setupPasswordTextField() {
-        passwordTextField.backgroundColor = .white
         passwordTextField.placeholder = "Enter your password"
-        passwordTextField.layer.borderColor = UIColor.systemIndigo.cgColor
-        passwordTextField.layer.borderWidth = 4
-        passwordTextField.textAlignment = .center
         passwordTextField.isSecureTextEntry = true
-        passwordTextField.contentVerticalAlignment = .center
         passwordTextField.frame = CGRect(x: 50, y: view.frame.height/2.5, width: view.frame.width - 100, height: 31)
 
         view.addSubview(passwordTextField)
@@ -75,13 +65,9 @@ class LoginScreen : UIViewController {
     }
 
     private func setupSignInButton(){
-        signInButton = UIButton(type: .system)
         signInButton.setTitle("Sign in", for: .normal)
-        signInButton.backgroundColor = .systemIndigo
-        signInButton.tintColor = .white
         signInButton
             .frame = CGRect(x: 50, y: view.frame.height/2 + 150, width: view.frame.width - 100, height: 40)
-
         signInButton
             .addTarget(self, action: #selector(performApp(parametrSender:)), for: .touchUpInside)
 
