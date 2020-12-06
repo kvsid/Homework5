@@ -59,9 +59,11 @@ class LoginScreen : UIViewController {
         view.addSubview(passwordTextField)
     }
     @objc func performApp(parametrSender: Any) {
-        let appScreneController = AppScreen()
-        appScreneController.userName = loginTextField.text
-        navigationController?.pushViewController(appScreneController, animated: true)
+        let appScreenController = AppScreen()
+        appScreenController.userName = loginTextField.text
+        loginTextField.text = ""
+        passwordTextField.text = ""
+        navigationController?.pushViewController(appScreenController, animated: true)
     }
 
     private func setupSignInButton(){
