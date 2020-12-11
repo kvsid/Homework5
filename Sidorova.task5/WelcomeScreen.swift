@@ -13,7 +13,8 @@ class WelcomeScreen : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Welcome Screen"
+        title = T.t("welcome_screen")
+        view.backgroundColor = .systemGray6
 
         setupLoginButton()
         setupRegistrationButton()
@@ -29,7 +30,7 @@ class WelcomeScreen : UIViewController {
         loginScreenButton = CustomButton(
             frame: CGRect(x: 50, y: view.frame.height/3, width: view.frame.width - 100, height: 40)
         )
-        loginScreenButton.setTitle("Login", for: .normal)
+        loginScreenButton.setTitle(T.t("login_button"), for: .normal)
         loginScreenButton
             .addTarget(self, action: #selector(performDisplayLogin(parametrSender:)), for: .touchUpInside)
 
@@ -41,7 +42,7 @@ class WelcomeScreen : UIViewController {
     }
 
     private func setupRegistrationButton(){
-        registrationScreenButton.setTitle("Registration", for: .normal)
+        registrationScreenButton.setTitle(T.t("registration_button"), for: .normal)
         registrationScreenButton
             .frame = CGRect(x: 50, y: view.frame.height/2, width: view.frame.width - 100, height: 40)
 

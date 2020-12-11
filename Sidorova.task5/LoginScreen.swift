@@ -16,7 +16,11 @@ class LoginScreen : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Login Screen"
+        title = T.t("login_screen")
+        view.backgroundColor = .systemGray6
+        self.navigationController?.navigationBar.isHidden = false
+
+
 
         setupLoginTextField()
         setupPasswordTextField()
@@ -25,7 +29,7 @@ class LoginScreen : UIViewController {
         setupSignLabel()
     }
     func setupSignLabel() {
-        signLabel.text = "Stay Logged In"
+        signLabel.text = T.t("stay_logged_in")
         signLabel.textColor = .darkGray
         signLabel.textAlignment = .center
         signLabel.frame = CGRect(x: 0, y: view.frame.height/2.15, width: view.frame.width, height: 30)
@@ -45,14 +49,14 @@ class LoginScreen : UIViewController {
     }
 
     func setupLoginTextField() {
-        loginTextField.placeholder = "Enter your login"
+        loginTextField.placeholder = T.t("enter_login")
         loginTextField.frame = CGRect(x: 50, y: view.frame.height/3, width: view.frame.width - 100, height: 31)
 
         view.addSubview(loginTextField)
     }
 
     func setupPasswordTextField() {
-        passwordTextField.placeholder = "Enter your password"
+        passwordTextField.placeholder = T.t("enter_password")
         passwordTextField.isSecureTextEntry = true
         passwordTextField.frame = CGRect(x: 50, y: view.frame.height/2.5, width: view.frame.width - 100, height: 31)
 
@@ -67,7 +71,7 @@ class LoginScreen : UIViewController {
     }
 
     private func setupSignInButton(){
-        signInButton.setTitle("Sign in", for: .normal)
+        signInButton.setTitle(T.t("sign_in"), for: .normal)
         signInButton
             .frame = CGRect(x: 50, y: view.frame.height/2 + 150, width: view.frame.width - 100, height: 40)
         signInButton

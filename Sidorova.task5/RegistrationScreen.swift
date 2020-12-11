@@ -14,7 +14,9 @@ class RegistrationScreen : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Registration Screen"
+        title = T.t("registration_screen")
+        view.backgroundColor = .systemGray6
+
 
         setupLoginTextField()
         setupPasswordTextField()
@@ -22,14 +24,14 @@ class RegistrationScreen : UIViewController {
     }
 
     func setupLoginTextField() {
-        loginTextField.placeholder = "Enter your login"
+        loginTextField.placeholder = T.t("enter_login")
         loginTextField.frame = CGRect(x: 50, y: view.frame.height/3, width: view.frame.width - 100, height: 31)
 
         view.addSubview(loginTextField)
     }
 
     func setupPasswordTextField() {
-        passwordTextField.placeholder = "Enter your password"
+        passwordTextField.placeholder = T.t("enter_password")
         passwordTextField.isSecureTextEntry = true
         passwordTextField.frame = CGRect(x: 50, y: view.frame.height/2.5, width: view.frame.width - 100, height: 31)
 
@@ -40,7 +42,7 @@ class RegistrationScreen : UIViewController {
     }
 
     private func setupRegistrationButton(){
-        registrationButton.setTitle("Registration", for: .normal)
+        registrationButton.setTitle(T.t("registration"), for: .normal)
         registrationButton
             .frame = CGRect(x: 50, y: view.frame.height/2 + 150, width: view.frame.width - 100, height: 40)
         registrationButton

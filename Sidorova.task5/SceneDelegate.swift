@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.navController = UINavigationController(rootViewController: viewController)
 
         self.window?.rootViewController = self.navController
-        self.window?.backgroundColor = UIColor.systemGray5
+        //self.window?.backgroundColor = UIColor.white //systemGray5
         self.window?.makeKeyAndVisible()
     }
 
